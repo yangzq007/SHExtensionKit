@@ -1,0 +1,16 @@
+PODS:
+  - SHExtensionKit (0.1.0)
+
+DEPENDENCIES:
+  - SHExtensionKit (from `../`)
+
+EXTERNAL SOURCES:
+  SHExtensionKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SHExtensionKit: 80e9f073d96c9968ec1c2429cbc73ede36c5ac7f
+
+PODFILE CHECKSUM: 4eef4a568b10394b7da79a7980a375bd570faec5
+
+COCOAPODS: 1.10.1
