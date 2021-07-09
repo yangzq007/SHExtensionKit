@@ -7,8 +7,15 @@
 //
 
 #import "SHAppDelegate.h"
+#import <SHExtensionKit/SHExtensionKit.h>
 
 @implementation SHAppDelegate
+
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey,id> *)launchOptions
+{
+    [UIDevice loadDeviceData];
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
