@@ -122,4 +122,10 @@
     self.frame = frame;
 }
 
+
+- (void)removeAllSubviews
+{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
 @end
