@@ -18,7 +18,7 @@ extern CGFloat SHTabbarHeight;  //tabbar高度（包含底部）
 
 @interface UIDevice (SHSize)
 
-+ (void)loadDeviceData;
++ (void)loadDeviceData NS_SWIFT_NAME(loadDeviceData());
 
 @end
 
