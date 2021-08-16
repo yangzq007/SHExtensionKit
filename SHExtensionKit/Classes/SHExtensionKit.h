@@ -12,4 +12,6 @@
 
 #import "UIView+SHLayout.h"
 
+#import "SHJSONTransform.h"
+
 #endif /* SHExtensionKit_h */
