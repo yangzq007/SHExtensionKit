@@ -30,6 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)removeAllSubviews;
 
+@property (nonatomic, assign) UIEdgeInsets contentEdge;
+@property (nonatomic, assign) CGFloat contentTop;
+@property (nonatomic, assign) CGFloat contentLeft;
+@property (nonatomic, assign) CGFloat contentBottom;
+@property (nonatomic, assign) CGFloat contentRight;
+
 @end
 
 NS_ASSUME_NONNULL_END

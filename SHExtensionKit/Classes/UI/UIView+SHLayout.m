@@ -153,4 +153,70 @@
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
+#pragma mark - ContentEdge
+
+- (UIEdgeInsets)contentEdge
+{
+    if (self.superview == nil) {
+        return UIEdgeInsetsZero;
+    }
+    return UIEdgeInsetsMake(self.top, self.left, self.superview.height-self.bottom, self.superview.width-self.right);
+}
+
+- (void)setContentEdge:(UIEdgeInsets)contentEdge
+{
+    if (self.superview == nil) {
+        return;
+    }
+    self.frame = CGRectMake(contentEdge.left, contentEdge.top, self.superview.width-contentEdge.left-contentEdge.right, self.superview.height-contentEdge.top-contentEdge.bottom);
+}
+
+- (CGFloat)contentTop
+{
+    return self.contentEdge.top;
+}
+
+- (void)setContentTop:(CGFloat)contentTop
+{
+    UIEdgeInsets edge = self.contentEdge;
+    edge.top = contentTop;
+    self.contentEdge = edge;
+}
+
+- (CGFloat)contentLeft
+{
+    return self.contentEdge.left;
+}
+
+- (void)setContentLeft:(CGFloat)contentLeft
+{
+    UIEdgeInsets edge = self.contentEdge;
+    edge.left = contentLeft;
+    self.contentEdge = edge;
+}
+
+- (CGFloat)contentBottom
+{
+    return self.contentEdge.bottom;
+}
+
+- (void)setContentBottom:(CGFloat)contentBottom
+{
+    UIEdgeInsets edge = self.contentEdge;
+    edge.bottom = contentBottom;
+    self.contentEdge = edge;
+}
+
+- (CGFloat)contentRight
+{
+    return self.contentEdge.right;
+}
+
+- (void)setContentRight:(CGFloat)contentRight
+{
+    UIEdgeInsets edge = self.contentEdge;
+    edge.right = contentRight;
+    self.contentEdge = edge;
+}
+
 @end
