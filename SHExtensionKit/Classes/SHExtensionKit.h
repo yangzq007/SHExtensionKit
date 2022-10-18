@@ -11,6 +11,7 @@
 #import "UIDevice+SHSize.h"
 
 #import "UIView+SHLayout.h"
+#import "NSArray+SHExtension.h"
 
 #import "SHJSONTransform.h"
 

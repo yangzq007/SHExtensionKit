@@ -17,7 +17,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *arr = @[
+        @{
+            @"title":@"1",
+            @"content":@(1)
+        },
+        @{
+            @"title":@"2",
+            @"content":@(2)
+        },
+        @{
+            @"title":@"3",
+            @"content":@(3)
+        },
+        @{
+            @"title":@"4",
+            @"content":@(4)
+        },
+        @{
+            @"title":@"5",
+            @"content":@(5)
+        }
+    ];
+    NSMutableArray *des = [arr map:^id _Nullable(NSDictionary *  _Nonnull item, NSInteger index) {
+        return [NSString stringWithFormat:@"index:%@ - title:%@ - content:%@",@(index) , item[@"title"], @([item[@"content"] integerValue]+index)];
+    }];
+    NSLog(@"%@", des);
+    
+    des = [arr map:^id _Nullable(NSDictionary *  _Nonnull item, NSInteger index) {
+        if (index == 1 || index == 3) {
+            return nil;
+        }
+        return [NSString stringWithFormat:@"index:%@ - title:%@ - content:%@",@(index) , item[@"title"], @([item[@"content"] integerValue]+index)];
+    }];
+    NSLog(@"%@", des);
 }
 
 - (void)didReceiveMemoryWarning
