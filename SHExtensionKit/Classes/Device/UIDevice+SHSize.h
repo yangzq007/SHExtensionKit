@@ -15,6 +15,8 @@ extern CGFloat SHStatusHeight;  //状态栏高度
 extern CGFloat SHNavHeight;     //导航栏高度
 extern CGFloat SHBottomPadding; //底部安全距离
 extern CGFloat SHTabbarHeight;  //tabbar高度（包含底部）
+extern CGFloat SHSafeBottom;    //安全区域底部
+extern CGFloat SHTinyLineHeight;//极细线高度
 
 @interface UIDevice (SHSize)
 

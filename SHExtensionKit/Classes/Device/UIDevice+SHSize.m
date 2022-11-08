@@ -13,6 +13,8 @@ CGFloat SHStatusHeight = 0.0f;
 CGFloat SHNavHeight = 0.0f;
 CGFloat SHTabbarHeight = 0.0f;
 CGFloat SHBottomPadding = 0.0f;
+CGFloat SHSafeBottom = 0.0f;
+CGFloat SHTinyLineHeight = 0.0f;
 
 @implementation UIDevice (SHSize)
 
@@ -28,6 +30,8 @@ CGFloat SHBottomPadding = 0.0f;
         SHBottomPadding = 0.0f;
     }
     SHTabbarHeight = 49.0f+SHBottomPadding;
+    SHSafeBottom = SHDeviceHeight-SHBottomPadding;
+    SHTinyLineHeight = 1.0f/UIScreen.mainScreen.scale;
 }
 
 @end
