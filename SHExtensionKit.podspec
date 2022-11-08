@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SHExtensionKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SHExtensionKit.'
+  s.summary          = 'UI、布局、基础类的扩展'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  扩展部分UI布局，帮助我们更快速的构建UI
+  扩展部分基础类，帮助我们快速的完成某些逻辑
                        DESC
 
   s.homepage         = 'https://github.com/yangzq007/SHExtensionKit'
@@ -31,6 +32,9 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'SHExtensionKit/Classes/**/*'
+  
+  s.pod_target_xcconfig = { 'GENERATE_INFOPLIST_FILE' => 'YES' }
+  s.user_target_xcconfig = { 'GENERATE_INFOPLIST_FILE' => 'YES' }
   
   # s.resource_bundles = {
   #   'SHExtensionKit' => ['SHExtensionKit/Assets/*.png']
