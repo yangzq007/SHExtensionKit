@@ -20,15 +20,13 @@ CGFloat SHTinyLineHeight = 0.0f;
 
 + (void)loadDeviceSizeData
 {
+    UIWindow *win = [[UIWindow alloc] init];
+    
     SHDeviceWidth = UIScreen.mainScreen.bounds.size.width;
     SHDeviceHeight = UIScreen.mainScreen.bounds.size.height;
     SHStatusHeight = UIApplication.sharedApplication.statusBarFrame.size.height;
     SHNavHeight = SHStatusHeight+44.0f;
-    if (@available(iOS 11.0, *)) {
-        SHBottomPadding = UIApplication.sharedApplication.windows.firstObject.safeAreaInsets.bottom;
-    }else{
-        SHBottomPadding = 0.0f;
-    }
+    SHBottomPadding = win.safeAreaInsets.bottom;
     SHTabbarHeight = 49.0f+SHBottomPadding;
     SHSafeBottom = SHDeviceHeight-SHBottomPadding;
     SHTinyLineHeight = 1.0f/UIScreen.mainScreen.scale;
