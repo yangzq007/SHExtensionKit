@@ -18,7 +18,7 @@ CGFloat SHTinyLineHeight = 0.0f;
 
 @implementation UIDevice (SHSize)
 
-+ (void)loadDeviceData
++ (void)loadDeviceSizeData
 {
     SHDeviceWidth = UIScreen.mainScreen.bounds.size.width;
     SHDeviceHeight = UIScreen.mainScreen.bounds.size.height;

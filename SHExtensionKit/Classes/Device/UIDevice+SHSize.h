@@ -20,7 +20,7 @@ extern CGFloat SHTinyLineHeight;//极细线高度
 
 @interface UIDevice (SHSize)
 
-+ (void)loadDeviceData NS_SWIFT_NAME(loadDeviceData());
++ (void)loadDeviceSizeData NS_SWIFT_NAME(loadDeviceSizeData());
 
 @end
 
