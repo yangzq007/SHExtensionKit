@@ -26,7 +26,11 @@ CGFloat SHTinyLineHeight = 0.0f;
     SHDeviceHeight = UIScreen.mainScreen.bounds.size.height;
     SHStatusHeight = UIApplication.sharedApplication.statusBarFrame.size.height;
     SHNavHeight = SHStatusHeight+44.0f;
-    SHBottomPadding = win.safeAreaInsets.bottom;
+    if (@available(iOS 11.0, *)) {
+        SHBottomPadding = win.safeAreaInsets.bottom;
+    }else{
+        SHBottomPadding = 0.0f;
+    }
     SHTabbarHeight = 49.0f+SHBottomPadding;
     SHSafeBottom = SHDeviceHeight-SHBottomPadding;
     SHTinyLineHeight = 1.0f/UIScreen.mainScreen.scale;
