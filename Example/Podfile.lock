@@ -1,5 +1,5 @@
 PODS:
-  - SHExtensionKit (0.1.0)
+  - SHExtensionKit (0.1.1)
 
 DEPENDENCIES:
   - SHExtensionKit (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SHExtensionKit: a8109da835cbcd3bde7816838838633d6319ca2c
+  SHExtensionKit: 4eb8bc75cfeb18318401f5163b606da485736a73
 
 PODFILE CHECKSUM: 4eef4a568b10394b7da79a7980a375bd570faec5
 

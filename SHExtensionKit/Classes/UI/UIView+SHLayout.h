@@ -36,6 +36,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat contentBottom;
 @property (nonatomic, assign) CGFloat contentRight;
 
+- (void)setContentEdge:(UIEdgeInsets)contentEdge on:(UIView *)superview;
+- (void)setContentTop:(CGFloat)contentTop on:(UIView *)superview;
+- (void)setContentLeft:(CGFloat)contentLeft on:(UIView *)superview;
+- (void)setContentBottom:(CGFloat)contentBottom on:(UIView *)superview;
+- (void)setContentRight:(CGFloat)contentRight on:(UIView *)superview;
+
+- (void)setContentEdge:(UIEdgeInsets)contentEdge base:(CGSize)size;
+- (void)setContentTop:(CGFloat)contentTop base:(CGSize)size;
+- (void)setContentLeft:(CGFloat)contentLeft base:(CGSize)size;
+- (void)setContentBottom:(CGFloat)contentBottom base:(CGSize)size;
+- (void)setContentRight:(CGFloat)contentRight base:(CGSize)size;
+
 @end
 
 NS_ASSUME_NONNULL_END

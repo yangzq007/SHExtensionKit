@@ -219,4 +219,86 @@
     self.contentEdge = edge;
 }
 
+#pragma mark - ContentEdge On SuperView
+
+- (UIEdgeInsets)contentEdgeOn:(UIView *)superview
+{
+    UIView *sView = self.superview ? self.superview : superview;
+    return UIEdgeInsetsMake(self.top, self.left, sView.height-self.bottom, sView.width-self.right);
+}
+
+- (void)setContentEdge:(UIEdgeInsets)contentEdge on:(UIView *)superview
+{
+    UIView *sView = self.superview ? self.superview : superview;
+    self.frame = CGRectMake(contentEdge.left, contentEdge.top, sView.width-contentEdge.left-contentEdge.right, sView.height-contentEdge.top-contentEdge.bottom);
+}
+
+- (void)setContentTop:(CGFloat)contentTop on:(UIView *)superview
+{
+    UIEdgeInsets edge = [self contentEdgeOn:superview];
+    edge.top = contentTop;
+    [self setContentEdge:edge on:superview];
+}
+
+- (void)setContentLeft:(CGFloat)contentLeft on:(UIView *)superview
+{
+    UIEdgeInsets edge = [self contentEdgeOn:superview];
+    edge.left = contentLeft;
+    [self setContentEdge:edge on:superview];
+}
+
+- (void)setContentBottom:(CGFloat)contentBottom on:(UIView *)superview
+{
+    UIEdgeInsets edge = [self contentEdgeOn:superview];
+    edge.bottom = contentBottom;
+    [self setContentEdge:edge on:superview];
+}
+
+- (void)setContentRight:(CGFloat)contentRight on:(UIView *)superview
+{
+    UIEdgeInsets edge = [self contentEdgeOn:superview];
+    edge.right = contentRight;
+    [self setContentEdge:edge on:superview];
+}
+
+#pragma mark - ContentEdge Base Size
+
+- (UIEdgeInsets)contentEdgeBase:(CGSize)size
+{
+    return UIEdgeInsetsMake(self.top, self.left, self.height-self.bottom, size.width-self.right);
+}
+
+- (void)setContentEdge:(UIEdgeInsets)contentEdge base:(CGSize)size
+{
+    self.frame = CGRectMake(contentEdge.left, contentEdge.top, size.width-contentEdge.left-contentEdge.right, size.height-contentEdge.top-contentEdge.bottom);
+}
+
+- (void)setContentTop:(CGFloat)contentTop base:(CGSize)size
+{
+    UIEdgeInsets edge = [self contentEdgeBase:size];
+    edge.top = contentTop;
+    [self setContentEdge:edge base:size];
+}
+
+- (void)setContentLeft:(CGFloat)contentLeft base:(CGSize)size
+{
+    UIEdgeInsets edge = [self contentEdgeBase:size];
+    edge.left = contentLeft;
+    [self setContentEdge:edge base:size];
+}
+
+- (void)setContentBottom:(CGFloat)contentBottom base:(CGSize)size
+{
+    UIEdgeInsets edge = [self contentEdgeBase:size];
+    edge.bottom = contentBottom;
+    [self setContentEdge:edge base:size];
+}
+
+- (void)setContentRight:(CGFloat)contentRight base:(CGSize)size
+{
+    UIEdgeInsets edge = [self contentEdgeBase:size];
+    edge.right = contentRight;
+    [self setContentEdge:edge base:size];
+}
+
 @end
